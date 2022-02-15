@@ -6,6 +6,7 @@ function SpicyFoodList() {
 
   function handleAddFood() {
     const newFood = getNewSpicyFood();
+    const newFoodArray = [...foods, newFood];
     console.log(newFood);
   }
 
@@ -17,7 +18,7 @@ function SpicyFoodList() {
 
   return (
     <div>
-      <button onClick={handleAddFood}>Add New Food</button>
+      <button onClick={handleAddFood}>{newFood}</button>
       <ul>{foodList}</ul>
     </div>
   );
